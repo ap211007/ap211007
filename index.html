@@ -13,10 +13,30 @@
   </header>
 
   <main class="container">
+    <section class="featured" aria-label="Featured hospital">
+      <img
+        src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80"
+        alt="Front view of Sagar City Hospital building"
+      />
+      <div class="featured-content">
+        <h2>Sagar City Hospital</h2>
+        <p>
+          Sagar City Hospital is a 24/7 multi-speciality center in Jayanagar, Bengaluru.
+          Key services include emergency care, cardiology, orthopedics, ICU support,
+          and advanced diagnostic imaging.
+        </p>
+        <ul>
+          <li><strong>Address:</strong> 14th Main, Jayanagar 4th Block, Bengaluru - 560041</li>
+          <li><strong>Phone:</strong> +91 80 4669 9999</li>
+          <li><strong>Emergency:</strong> Open 24 hours</li>
+        </ul>
+      </div>
+    </section>
+
     <section class="search-card">
       <label for="searchInput">Enter area</label>
       <div class="search-row">
-        <input id="searchInput" type="text" placeholder="Example: Indiranagar or 560038" />
+        <input id="searchInput" type="text" placeholder="Example: Jayanagar or 560041" />
         <button id="searchBtn">Search</button>
       </div>
       <p id="statusText" class="status">Showing all hospitals.</p>
@@ -30,9 +50,11 @@
 
   <template id="hospitalCardTemplate">
     <article class="card">
-      <div>
+      <img class="hospital-image" src="" alt="" />
+      <div class="card-main">
         <h3 class="name"></h3>
         <p class="meta"></p>
+        <p class="details"></p>
       </div>
       <div class="actions">
         <a class="directions" target="_blank" rel="noreferrer">Get Directions</a>

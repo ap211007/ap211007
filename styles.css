@@ -36,9 +36,43 @@ body {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 980px;
   margin: 0 auto;
   padding: 1.5rem 1rem 2.5rem;
+}
+
+.featured {
+  margin-top: -2rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgb(18 34 59 / 10%);
+  margin-bottom: 1rem;
+}
+
+.featured img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.featured-content {
+  padding: 1rem;
+}
+
+.featured-content h2 {
+  margin: 0;
+}
+
+.featured-content p {
+  color: var(--muted);
+}
+
+.featured-content ul {
+  margin: 0;
+  padding-left: 1rem;
+  line-height: 1.6;
 }
 
 .search-card {
@@ -46,7 +80,6 @@ body {
   border: 1px solid var(--border);
   border-radius: 14px;
   padding: 1rem;
-  margin-top: -2.2rem;
   box-shadow: 0 8px 20px rgb(18 34 59 / 10%);
 }
 
@@ -93,18 +126,26 @@ button {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
+  padding: 0.9rem;
+  display: grid;
+  grid-template-columns: 140px 1fr auto;
   align-items: center;
   gap: 1rem;
+}
+
+.hospital-image {
+  width: 140px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .name {
   margin: 0;
 }
 
-.meta {
+.meta,
+.details {
   margin: 0.35rem 0 0;
   color: var(--muted);
 }
@@ -134,8 +175,14 @@ button {
 @media (max-width: 640px) {
   .search-row,
   .card {
+    display: flex;
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .hospital-image {
+    width: 100%;
+    height: 170px;
   }
 
   .actions {
