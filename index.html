@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hospital Finder</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <h1>Hospital Finder</h1>
+    <p>Search nearby hospitals by area, city, or pincode.</p>
+  </header>
+
+  <main class="container">
+    <section class="search-card">
+      <label for="searchInput">Enter area</label>
+      <div class="search-row">
+        <input id="searchInput" type="text" placeholder="Example: Indiranagar or 560038" />
+        <button id="searchBtn">Search</button>
+      </div>
+      <p id="statusText" class="status">Showing all hospitals.</p>
+    </section>
+
+    <section>
+      <h2>Results</h2>
+      <div id="results" class="results"></div>
+    </section>
+  </main>
+
+  <template id="hospitalCardTemplate">
+    <article class="card">
+      <div>
+        <h3 class="name"></h3>
+        <p class="meta"></p>
+      </div>
+      <div class="actions">
+        <a class="directions" target="_blank" rel="noreferrer">Get Directions</a>
+        <a class="call" href="#">Call</a>
+      </div>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
