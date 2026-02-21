@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hospital Finder</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <h1>Hospital Finder</h1>
+    <p>Search nearby hospitals by area, city, or pincode.</p>
+  </header>
+
+  <main class="container">
+    <section class="featured" aria-label="Featured hospital">
+      <img
+        src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80"
+        alt="Front view of Sagar City Hospital building"
+      />
+      <div class="featured-content">
+        <h2>Sagar City Hospital</h2>
+        <p>
+          Sagar City Hospital is a 24/7 multi-speciality center in Jayanagar, Bengaluru.
+          Key services include emergency care, cardiology, orthopedics, ICU support,
+          and advanced diagnostic imaging.
+        </p>
+        <ul>
+          <li><strong>Address:</strong> 14th Main, Jayanagar 4th Block, Bengaluru - 560041</li>
+          <li><strong>Phone:</strong> +91 80 4669 9999</li>
+          <li><strong>Emergency:</strong> Open 24 hours</li>
+          <li><strong>Website:</strong> <a href="https://www.sagarhospitals.in" target="_blank" rel="noreferrer">www.sagarhospitals.in</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="search-card">
+      <label for="searchInput">Enter area</label>
+      <div class="search-row">
+        <input id="searchInput" type="text" placeholder="Example: Jayanagar or 560041" />
+        <button id="searchBtn">Search</button>
+      </div>
+      <p id="statusText" class="status">Showing all hospitals.</p>
+    </section>
+
+    <section>
+      <h2>Results</h2>
+      <div id="results" class="results"></div>
+    </section>
+  </main>
+
+  <template id="hospitalCardTemplate">
+    <article class="card">
+      <img class="hospital-image" src="" alt="" />
+      <div class="card-main">
+        <h3 class="name"></h3>
+        <p class="meta"></p>
+        <p class="details"></p>
+      </div>
+      <div class="actions">
+        <a class="directions" target="_blank" rel="noreferrer">Get Directions</a>
+        <a class="website" target="_blank" rel="noreferrer">Visit Website</a>
+        <a class="call" href="#">Call</a>
+      </div>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
